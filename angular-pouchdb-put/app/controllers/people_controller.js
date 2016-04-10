@@ -15,11 +15,11 @@ pouchPutDemo.controller('PeopleController', function($log, $scope, pouchDB, Peop
     country: ''
   };
   
-  $scope.updatePerson = function (peopleIndex) {
+  $scope.updatePerson = function(peopleIndex) {
     var person = $scope.allPeople[peopleIndex];
     console.log('updatePerson ', person);
     PeopleService.update(person).then(fetchPeople);
-  }
+  };
   
   $scope.addPerson = function () {
     console.log('addPerson called');
