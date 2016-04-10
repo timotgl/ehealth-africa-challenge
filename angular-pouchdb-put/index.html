@@ -6,15 +6,29 @@
     <script src="bower_components/pouchdb/dist/pouchdb.js"></script>
     <script src="bower_components/angular-pouchdb/angular-pouchdb.js"></script>
     <script src="app/app.js"></script>
-    <script src="app/controllers/main_controller.js"></script>
+    <script src="app/controllers/db_controller.js"></script>
   </head>
-  <body ng-init="persons=[{name: 'Antonio', country: 'Italy'}, {name: 'Timo', country: 'Germany'}, {name: 'Alvaro', country: 'Uruguay'}]">
+  <body>
     <h1>angular-pouchdb-put demo</h1>
-    <input type="text" ng-model="name" /> {{ name }}
-    <div ng-controller="MainController">
+    <div ng-controller="DbController">
+      <h2>Current DB content:</h2>
       <ul>
-        <li ng-repeat="person in persons | filter:name | orderBy:'country'">{{ person.name }} ({{ person.country }})</li>
+        <li ng-repeat="person in records">
+          {{ person.name }} ({{ person.country }})
+        </li>
       </ul>
+      <h2>Add new person:</h2>
+      <form ng-submit="addPerson()">
+        <label>
+          Name:
+          <input type="text" ng-model="person.name" />
+        </label>
+        <label>
+          Country:
+          <input type="text" ng-model="person.country" />
+        </label>
+        <input type="submit" value="Save" />
+      </form>
     </div>
   </body>
 </html>
