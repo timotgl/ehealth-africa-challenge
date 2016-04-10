@@ -1,0 +1,14 @@
+{
+  "name": "angular-pouchdb-put",
+  "description": "Some automated tests for angular-pouchdb's put method",
+  "version": "0.0.1",
+  "license": "none",
+  "private": true,
+  "authors": ["Timo Taglieber <github@timotaglieber.de>"],
+  "main": "app.js",
+  "moduleType": ["amd"],
+  "dependencies": {
+    "angular": "1.5.4-build.4732+sha.5d695e5",
+    "angular-pouchdb": "4.1.0"
+  }
+}

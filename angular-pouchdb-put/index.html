@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="PouchPutDemo">
+  <head>
+    <title>angular-pouchdb-put demo</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/pouchdb/dist/pouchdb.js"></script>
+    <script src="bower_components/angular-pouchdb/angular-pouchdb.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/main_controller.js"></script>
+  </head>
+  <body ng-init="persons=[{name: 'Antonio', country: 'Italy'}, {name: 'Timo', country: 'Germany'}, {name: 'Alvaro', country: 'Uruguay'}]">
+    <h1>angular-pouchdb-put demo</h1>
+    <input type="text" ng-model="name" /> {{ name }}
+    <div ng-controller="MainController">
+      <ul>
+        <li ng-repeat="person in persons | filter:name | orderBy:'country'">{{ person.name }} ({{ person.country }})</li>
+      </ul>
+    </div>
+  </body>
+</html>
