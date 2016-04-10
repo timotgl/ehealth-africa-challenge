@@ -7,7 +7,7 @@ pouchPutDemo.service('PeopleService', function(pouchDB) {
       });
       db.allDocs({include_docs: true}).then(function(result) {
         result.rows.forEach(function(row) {
-          console.log(row.doc);
+          console.log(row);
         });
       });
   };
@@ -16,8 +16,12 @@ pouchPutDemo.service('PeopleService', function(pouchDB) {
     return db.allDocs({include_docs: true});
   };
   
+  this.update = function(person) {
+    return db.put(person.doc);
+  };
+  
   this.addPerson = function(person) {
-    db.post(person);
+    return db.post(person);
     /*
       .then(get)
       .then(bind)

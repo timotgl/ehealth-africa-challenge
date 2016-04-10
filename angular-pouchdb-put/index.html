@@ -12,10 +12,12 @@
   <body>
     <h1>angular-pouchdb-put demo</h1>
     <div ng-controller="PeopleController">
-      <h2>All people:</h2>
+      <h2>All {{ allPeople.length }} people:</h2>
       <ul>
         <li ng-repeat="person in allPeople">
-          {{ person.doc.name }} ({{ person.doc.country }})
+          <input type="text" ng-model="person.doc.name" />
+          <input type="text" ng-model="person.doc.country" />
+          <button ng-click="updatePerson($index)">Update</button>
         </li>
       </ul>
       <h2>Add new person:</h2>
