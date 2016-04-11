@@ -1,0 +1,19 @@
+{
+  "name": "angular-pouchdb-put",
+  "description": "Some automated tests for angular-pouchdb's put method",
+  "version": "0.0.1",
+  "private": true,
+  "license": "none",
+  "dependencies": {
+    "karma": "0.13.22",
+    "karma-jasmine": "0.3.8",
+    "karma-chrome-launcher": "0.2.3",
+    "jasmine-core": "2.4.1"
+  },
+  "scripts": {
+    "test": "karma"
+  },
+  "devDependencies": {
+    "karma-chrome-launcher": "^0.2.3"
+  }
+}

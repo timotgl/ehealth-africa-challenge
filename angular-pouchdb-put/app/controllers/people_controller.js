@@ -1,4 +1,4 @@
-pouchPutDemo.controller('PeopleController', function($log, $scope, pouchDB, PeopleService) {
+pouchPutDemo.controller('PeopleController', function($log, $scope, PeopleService) {
   
   function fetchPeople() {
     PeopleService.getAll().then(function(result) {
