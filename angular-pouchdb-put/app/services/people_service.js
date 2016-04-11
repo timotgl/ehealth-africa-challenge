@@ -22,27 +22,5 @@ pouchPutDemo.service('PeopleService', function(pouchDB) {
   
   this.addPerson = function(person) {
     return db.post(person);
-    /*
-      .then(get)
-      .then(bind)
-      .catch(error);
-    */
   };
-  
-  function error(err) {
-    $log.error(err);
-  }
-
-  function get(res) {
-    if (!res.ok) {
-      return error(res);
-    }
-    var response = db.get(res.id);
-    console.log('get: response=', response);
-    return response;
-  }
-
-  function bind(res) {
-    $scope.doc = res;
-  }
 });

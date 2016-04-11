@@ -11,9 +11,6 @@
     "jasmine-core": "2.4.1"
   },
   "scripts": {
-    "test": "karma"
-  },
-  "devDependencies": {
-    "karma-chrome-launcher": "^0.2.3"
+    "test": "karma start"
   }
 }
