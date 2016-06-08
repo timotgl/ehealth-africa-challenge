@@ -1,5 +1,5 @@
 # Solutions for technical assignment
-I assuming ECMAScript 5.1.
+I'm assuming ECMAScript 5.1.
 
  1. [Depth first tree traversal](depth_first_tree_traversal.md)
  1. [Characters in strings](find_chars.js)
